@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { NgstyleComponent } from './components/ngstyle/ngstyle.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NgstyleComponent
   ],
   imports: [
     BrowserModule,
