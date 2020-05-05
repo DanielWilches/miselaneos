@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faCamera } from '@fortawesome/free-solid-svg-icons';
+import { FaConfig } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'miscelabeos';
+  faCoffee = faCamera;
+  constructor( public faCoffe: FaConfig ){}
+  title = 'miselaneos';
 }
