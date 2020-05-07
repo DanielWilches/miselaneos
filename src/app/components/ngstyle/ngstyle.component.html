@@ -1,4 +1,16 @@
-<p [ngStyle]="{'font-size': '25px'}">Hola.. mundo como estas hoy </p>
-<button class=" btn btn-danger">HOLAAA
-    <i class="fas fa-plus"></i>
-</button>
+<div class="card">
+    <h5 class="card-header text-capitalize">ejemplo NgStyle</h5>
+    <div class="card-body">
+        <div class="border border-dark rounded bg-light text-center">
+            <p [style.fontSize.px]="tamano">Hola.. mundo como estas hoy </p>
+        </div>
+        <button class="btn btn-danger" (click)="tamano = tamano - 5">
+            <fa-icon [icon]="icon.faminus"></fa-icon>
+        </button>
+
+        <button ng class="btn btn-success m-5" (click)="tamano = tamano + 5">
+            <fa-icon [icon]="icon.faplus"></fa-icon>
+        </button>
+        <p class="card-text">Este ejercicio 5 pixeles demas cada vez que se oprime el bottom plus y resta cada vez que se da clik en el minus</p>
+    </div>
+</div>

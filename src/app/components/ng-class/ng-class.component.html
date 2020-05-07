@@ -1,0 +1,26 @@
+<div class="card">
+    <h5 class="card-header "> {{'ejemplo de ngClass' | mayuscula }} </h5>
+    <div class="card-body">
+        <div [ngClass]="alert" class="alert" role="alert">
+            <p>Esta es una pruba del Ngclass</p>
+        </div>
+        <div>
+            <button type="button" class="btn btn-outline-success btn-block  text-capitalize" (click)="alert= 'alert-success'">success</button>
+            <button type="button" class="btn btn-outline-danger btn-block text-capitalize" (click)="alert='alert-danger'"> danger </button>
+        </div>
+        <h4 class="text-capitalize text-center pt-2 pb-1">ejemplo asincrono</h4>
+        <p *ngIf="!loading" class="text-center text-capitalize">guarde sus cambios</p>
+        <p *ngIf="loading" class="text-capitalize text-center" [ngClass]="{'text-success': loading}">{{ incio }}</p>
+        <p *ngIf="!loading" class="text-capitalize text-center" [ngClass]="{'text-danger': !loading}">{{ fin }}</p>
+        <button (click)="ejecutar()" type="submit" name="button" [ngClass]="{'btn-success': loading, 'btn-warning':!loading }" class="btn btn-block text-capitalize text-center" [disabled]="loading">
+            <fa-icon *ngIf="!loading" [icon]="iconsS.faSave" ></fa-icon>
+            <fa-icon *ngIf="loading" [icon]="iconsS.faSync" [spin]="loading" ></fa-icon>
+            guardar cambios 
+        </button>
+        <p class="text-capitalize">para tener mas informacion del NgClass consulte su documentacion
+            <strong>
+                <a class="text-primary" href="https://angular.io/api/common/NgClass" target="_blank" > aqui </a>
+            </strong>
+        </p>
+    </div>
+</div>
